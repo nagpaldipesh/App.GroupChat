@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.16" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.5" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.30.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\App.GroupChat.Data\App.GroupChat.Data.csproj" />
+		<ProjectReference Include="..\App.GroupChat.Services\App.GroupChat.Services.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Entities\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="App.GroupChat.Api.IntegrationTests" />
+	</ItemGroup>
+
+</Project>
