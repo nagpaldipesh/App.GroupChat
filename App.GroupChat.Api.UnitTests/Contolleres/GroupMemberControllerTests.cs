@@ -53,11 +53,7 @@ namespace App.GroupChat.Api.UnitTests.Contolleres {
 
             var response = await _controller.RemoveMemberFromGroupAsync(groupId: 1, userId: 12345);
             response.ShouldNotBeNull();
-            response.ShouldBeOfType<OkObjectResult>();
-            var result = (OkObjectResult)response;
-            result.ShouldNotBeNull();
-            result.Value.ShouldNotBeNull();
-            result.Value.ShouldBe(true);
+            response.ShouldBeOfType<OkResult>();
         }
     }
 }
